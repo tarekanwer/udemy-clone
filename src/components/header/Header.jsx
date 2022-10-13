@@ -27,6 +27,7 @@ const Header = () => {
   return (
     <header className={classes.container}>
       <Menu />
+      <div className={classes.spacer}></div>
       <div className={classes.logo_container}>
         <img alt="logo" src={image} className={classes.logo} />
       </div>

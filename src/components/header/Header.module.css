@@ -7,14 +7,19 @@
   width: 100%;
   height: 3.8rem;
   box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.2);
-  
+
   /* margin: 0 3rem 0 3rem; */
 }
-.logo_container{
-    flex-grow: 1;
+.logo_container {
+  flex-grow: 1;
 }
 
 .logo {
-    height: 34px;
-    width: 91px;
+  height: 1.751rem;
+  width: 4.6875rem;
+}
+
+.spacer {
+  height: 3rem;
+  width: 3rem;
 }
