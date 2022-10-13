@@ -1,10 +1,8 @@
-import React, {Fragment} from 'react'
-import classes from './Layout.module.css'
+import React from "react";
+import classes from "./Layout.module.css";
 
 const Layout = (props) => {
-  return (
-    <div className={classes.container}>{props.children}</div>
-  )
-}
+  return <div className={classes.container}>{props.children}</div>;
+};
 
-export default Layout
+export default Layout;
