@@ -43,7 +43,7 @@ const Header = () => {
           <SearchIcon
             sx={{
               left: 0,
-              color: "#b6b8ba",
+              color: "#828282",
             }}
           />
           <input

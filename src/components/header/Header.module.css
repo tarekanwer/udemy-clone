@@ -43,6 +43,11 @@
     flex-grow: 0;
     order: -1;
     padding: 1rem;
+    margin-left: 0.5rem;
+  }
+  .logo {
+    height: 34px;
+    width: 91px;
   }
   .Menu {
     display: none;
@@ -64,14 +69,14 @@
     align-items: center;
     justify-content: flex-start;
     border: 1px black solid;
-    padding: 0.5rem;
-    border-radius: 1.2rem;
-    background-color: rgb(245, 240, 240);
+    padding: 0.7rem;
+    border-radius: 1.4rem;
+    background-color: rgb(241, 241, 241);
   }
   .search__text {
     padding: 0 24px;
     border: 0;
-    background-color: rgb(245, 240, 240);
+    background-color:  rgb(241, 241, 241);
     flex-grow: 1;
     flex-shrink: 1;
   }
@@ -83,7 +88,7 @@
     font-size: 0.8rem;
     background-color: white;
     height: 100%;
-    width: 6.8rem;
+    width: 8vw;
     border: 0;
   }
   .text:hover {
@@ -94,29 +99,29 @@
     height: 38px;
     border: 1px solid #1c1d1f;
     background-color: transparent;
-    padding: 0 1.2rem;
+    padding: 0 auto;
     margin: 1rem 0.2rem;
     font-weight: 1000;
-    line-height: 0.1rem;
+    font-size: 0.8rem;
+    /* line-height: 0.1rem; */
     font-stretch: 100%;
     min-width: auto;
-    white-space: nowrap;
+    white-space: pre-wrap;
     width: 6.5vw;
   }
   .sign__up {
     display: initial;
     height: 38px;
-    width: 6.5vw;
+    width: 6.95vw;
     border: 1px solid #1c1d1f;
     background-color: transparent;
-    padding: 0 1.2rem;
+    padding: 0 auto;
     margin: 1rem 0.2rem;
     font-weight: 1000;
     color: white;
     background-color: black;
     min-width: auto;
-    line-height: 0.1rem;
-    white-space: nowrap;
+    white-space: pre-wrap;
   }
   .lng {
     display: initial;
@@ -124,10 +129,10 @@
     border: 1px solid #1c1d1f;
     background-color: transparent;
     padding: auto;
-    margin: 1rem 0.8rem 1rem 0.2rem;
+    margin: 1rem 2rem 1rem 0.2rem;
   }
   .lng:hover,
   .log__in:hover{
-    background-color: rgb(245, 240, 240);
+    background-color: rgb(241, 241, 241);
   }
 }
