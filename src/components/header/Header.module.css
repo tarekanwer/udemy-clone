@@ -4,11 +4,9 @@
   align-items: center;
   justify-content: center;
   color: black;
-  width: 100%;
-  height: 3.8rem;
+  width: 100vw;
+  height: 72px;
   box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.2);
-
-  /* margin: 0 3rem 0 3rem; */
 }
 .logo_container {
   flex-grow: 1;
@@ -22,4 +20,114 @@
 .spacer {
   height: 3rem;
   width: 3rem;
+}
+.text {
+  display: none;
+}
+
+.form__div {
+  display: none;
+}
+.log__in {
+  display: none;
+}
+.sign__up {
+  display: none;
+}
+.lng {
+  display: none;
+}
+
+@media (min-width: 50rem) {
+  .logo_container {
+    flex-grow: 0;
+    order: -1;
+    padding: 1rem;
+  }
+  .Menu {
+    display: none;
+  }
+  .Search {
+    display: none;
+  }
+  .spacer {
+    display: none;
+  }
+  .form__div {
+    display: initial;
+    padding: 1rem;
+    flex-grow: 1;
+    flex-shrink: 1;
+  }
+  .search__form {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border: 1px black solid;
+    padding: 0.5rem;
+    border-radius: 1.2rem;
+    background-color: rgb(245, 240, 240);
+  }
+  .search__text {
+    padding: 0 24px;
+    border: 0;
+    background-color: rgb(245, 240, 240);
+    flex-grow: 1;
+    flex-shrink: 1;
+  }
+  .search__text:focus {
+    outline: 0;
+  }
+  .text {
+    display: initial;
+    font-size: 0.8rem;
+    background-color: white;
+    height: 100%;
+    width: 6.8rem;
+    border: 0;
+  }
+  .text:hover {
+    color: #5624d0;
+  }
+  .log__in {
+    display: initial;
+    height: 38px;
+    border: 1px solid #1c1d1f;
+    background-color: transparent;
+    padding: 0 1.2rem;
+    margin: 1rem 0.2rem;
+    font-weight: 1000;
+    line-height: 0.1rem;
+    font-stretch: 100%;
+    min-width: auto;
+    white-space: nowrap;
+    width: 6.5vw;
+  }
+  .sign__up {
+    display: initial;
+    height: 38px;
+    width: 6.5vw;
+    border: 1px solid #1c1d1f;
+    background-color: transparent;
+    padding: 0 1.2rem;
+    margin: 1rem 0.2rem;
+    font-weight: 1000;
+    color: white;
+    background-color: black;
+    min-width: auto;
+    line-height: 0.1rem;
+    white-space: nowrap;
+  }
+  .lng {
+    display: initial;
+    height: 38px;
+    border: 1px solid #1c1d1f;
+    background-color: transparent;
+    padding: auto;
+    margin: 1rem 0.8rem 1rem 0.2rem;
+  }
+  .lng:hover,
+  .log__in:hover{
+    background-color: rgb(245, 240, 240);
+  }
 }
