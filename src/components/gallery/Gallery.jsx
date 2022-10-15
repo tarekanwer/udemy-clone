@@ -20,7 +20,12 @@ const slideHandler = (text, src, index) => {
   if (index === 0) {
     return (
       <div key={index} className={classes.container}>
-        <div className={classes.modal}></div>
+        <div className={classes.modal}>
+          <h5>Unlock the power of your people</h5>
+          <p>
+            Udemy Business is trusted by 12.5K+ companies around the world. <u>Find out what we can do for yours.</u>
+          </p>
+        </div>
         <img src={src} alt="gallery-img" />
       </div>
     );
