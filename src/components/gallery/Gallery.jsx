@@ -23,7 +23,8 @@ const slideHandler = (text, src, index) => {
         <div className={classes.modal}>
           <h5>Unlock the power of your people</h5>
           <p>
-            Udemy Business is trusted by 12.5K+ companies around the world. <u>Find out what we can do for yours.</u>
+            Udemy Business is trusted by 12.5K+ companies around the world.{" "}
+            <u>Find out what we can do for yours.</u>
           </p>
         </div>
         <img src={src} alt="gallery-img" />
@@ -33,7 +34,10 @@ const slideHandler = (text, src, index) => {
   if (index === 1) {
     return (
       <div key={index} className={classes.container}>
-        <div></div>
+        <div className={classes.modal__2}>
+          <h5>Learning that gets you</h5>
+          <p>Skills for your present (and your future). Get started with us.</p>
+        </div>
         <img src={src} alt="gallery-img" />
       </div>
     );
