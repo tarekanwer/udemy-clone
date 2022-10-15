@@ -2,6 +2,7 @@ import React from "react";
 import Carousel from "react-material-ui-carousel";
 import g1 from "../../images/g1.jpg";
 import g2 from "../../images/g2.jpg";
+import classes from "./Gallery.module.css";
 
 const items = [
   {
@@ -15,15 +16,35 @@ const items = [
   },
 ];
 
+const slideHandler = (text, src, index) => {
+  if (index === 0) {
+    return (
+      <div key={index} className={classes.container}>
+        <div className={classes.modal}></div>
+        <img src={src} alt="gallery-img" />
+      </div>
+    );
+  }
+  if (index === 1) {
+    return (
+      <div key={index} className={classes.container}>
+        <div></div>
+        <img src={src} alt="gallery-img" />
+      </div>
+    );
+  }
+};
+
 const Gallery = () => {
   return (
-    <Carousel indicators={false} navButtonsAlwaysVisible={true} animation = 'slide' interval={10000}>
+    <Carousel
+      indicators={false}
+      navButtonsAlwaysVisible={true}
+      animation="slide"
+      interval={10000}
+    >
       {items.map((item, index) => {
-        return (
-          <div key={index}>
-            <img src={item.src} alt="gallery-img" />
-          </div>
-        );
+        return slideHandler(item.description, item.src, index);
       })}
     </Carousel>
   );
