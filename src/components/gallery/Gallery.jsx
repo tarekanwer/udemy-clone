@@ -13,7 +13,7 @@ const items = [
   },
 ];
 
-const slideHandler = (text, src, index) => {
+const slideHandler = ( src, index) => {
   if (index === 0) {
     return (
       <div key={index} className={classes.container}>
@@ -50,7 +50,7 @@ const Gallery = () => {
       interval={10000}
     >
       {items.map((item, index) => {
-        return slideHandler(item.description, item.src, index);
+        return slideHandler(item.src, index);
       })}
     </Carousel>
   );
