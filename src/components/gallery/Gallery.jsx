@@ -6,12 +6,9 @@ import classes from "./Gallery.module.css";
 
 const items = [
   {
-    description: "A PDF Reader specially designed for musicians.",
     src: g1,
   },
   {
-    description:
-      "My Solution on the 2019 Hash Code by Google Slideshow problem.",
     src: g2,
   },
 ];
@@ -20,6 +17,7 @@ const slideHandler = (text, src, index) => {
   if (index === 0) {
     return (
       <div key={index} className={classes.container}>
+        <img src={src} alt="gallery-img" />
         <div className={classes.modal}>
           <h5>Unlock the power of your people</h5>
           <p>
@@ -27,18 +25,17 @@ const slideHandler = (text, src, index) => {
             <u>Find out what we can do for yours.</u>
           </p>
         </div>
-        <img src={src} alt="gallery-img" />
       </div>
     );
   }
   if (index === 1) {
     return (
       <div key={index} className={classes.container}>
+        <img src={src} alt="gallery-img" />
         <div className={classes.modal__2}>
           <h5>Learning that gets you</h5>
           <p>Skills for your present (and your future). Get started with us.</p>
         </div>
-        <img src={src} alt="gallery-img" />
       </div>
     );
   }

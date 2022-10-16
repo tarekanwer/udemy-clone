@@ -1,5 +1,9 @@
 .container {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .container img {
   width: 100%;
@@ -7,11 +11,43 @@
 }
 
 .modal {
-  display: none;
+  /* display: none; */
+  background-color: white;
+  width: 90vw;
+  height: 10rem;
+  padding: 2.4rem;
+  text-align: justify;
+}
+.modal h5 {
+  font-size: 1.7rem;
+  margin: 0;
+  letter-spacing: -0.05rem;
+  max-width: 80rem;
+  line-height: 2.4rem;
+}
+.modal p {
+  font-weight: 300;
+}
+.modal u {
+  color: #5624d0;
 }
 
 .modal__2 {
-  display: none;
+  /* display: none; */
+  width: 90vw;
+  height: 9rem;
+  padding: 2.4rem;
+  text-align: justify;
+}
+
+.modal__2 h5 {
+  margin: 0;
+  font-size: 1.7rem;
+  line-height: 3rem;
+  letter-spacing: -0.1rem;
+}
+.modal__2 p {
+  font-weight: 400;
 }
 
 @media (min-width: 50rem) {
@@ -20,43 +56,16 @@
     position: absolute;
     background-color: white;
     width: 20rem;
-    height: 10rem;
     left: 4.8rem;
     top: 2.4rem;
-    padding: 2.4rem;
-    text-align: justify;
-  }
-  .modal h5 {
-    font-size: 2.1rem;
-    margin: 0;
-    letter-spacing: -0.05rem;
-    max-width: 80rem;
-    line-height: 2.4rem;
-  }
-  .modal p {
-    font-weight: 300;
-  }
-  .modal u {
-    color: #5624d0;
   }
   .modal__2 {
     display: initial;
     position: absolute;
     background-color: white;
     width: 20rem;
-    height: 9rem;
+    height: 7rem;
     left: 4.8rem;
     top: 2.4rem;
-    padding: 2.4rem;
-    text-align: justify;
-  }
-  .modal__2 h5 {
-    margin: 0;
-    font-size: 2.5rem;
-    line-height: 3rem;
-    letter-spacing: -0.1rem;
-  }
-  .modal__2 p {
-    font-weight: 400;
   }
 }
