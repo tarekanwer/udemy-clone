@@ -50,7 +50,7 @@
   font-weight: 400;
 }
 
-@media (min-width: 50rem) {
+@media (min-width: 45rem) {
   .modal {
     display: initial;
     position: absolute;
