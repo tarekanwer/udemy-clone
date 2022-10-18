@@ -14,7 +14,6 @@ const Nav = () => {
   const classHandler = (event) => {
     setIsSelected(+event.target.value);
   };
-  console.log(isSelected);
   return (
     <nav className={classes.container}>
       <ul>
