@@ -1,0 +1,47 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 260px;
+  height: 270px;
+  cursor: pointer;
+}
+
+.container img {
+  width: 100%;
+  height: 153px;
+}
+
+.container h3 {
+  margin: 0;
+  font-size: 1.07rem;
+  margin-bottom: 0.3rem;
+}
+
+.container p {
+  font-size: 0.7rem;
+  margin: 0;
+  font-weight: 500;
+  color: rgb(107, 107, 107);
+  margin-bottom: 0.3rem;
+}
+
+.rating {
+  display: flex;
+  justify-content: flex-start;
+  align-items: middle;
+}
+
+.rating h6 {
+  margin: 0;
+  padding-right: 0.5rem;
+  color: #b4690e;
+  font-size: 0.85rem;
+}
+
+.rating p {
+    font-size: 0.8rem;
+    margin: 0;
+    padding-left: 0.2rem;
+}

@@ -1,6 +1,7 @@
 import React, { useState, Fragment } from "react";
 import classes from "./Nav.module.css";
-import Category from "./Category";
+import CategoryCourses from "./CategoryCourses";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const categories = [
   "Python",
@@ -20,28 +21,33 @@ const Nav = () => {
   return (
     <Fragment>
       <nav className={classes.container}>
-          <ul>
-            {categories.map((item, index) => {
-              return (
-                <li key={index}>
-                  <button
-                    key={index}
-                    className={
-                      isSelected === index
-                        ? `${classes.btn} ${classes.active}`
-                        : `${classes.btn}`
-                    }
-                    onClick={classHandler}
-                    value={index}
-                  >
-                    {item}
-                  </button>
-                </li>
-              );
-            })}
-          </ul>
+        <ul>
+          {categories.map((item, index) => {
+            return (
+              <li key={index}>
+                <button
+                  key={index}
+                  className={
+                    isSelected === index
+                      ? `${classes.btn} ${classes.active}`
+                      : `${classes.btn}`
+                  }
+                  onClick={classHandler}
+                  value={index}
+                >
+                  {item}
+                </button>
+                <div>
+                  <ExpandMoreIcon />
+                </div>
+              </li>
+            );
+          })}
+        </ul>
       </nav>
-      <Category />
+      <div className={classes.box}>
+        <CategoryCourses />
+      </div>
     </Fragment>
   );
 };
