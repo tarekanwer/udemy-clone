@@ -69,13 +69,13 @@ const CategoryCourses = () => {
         slidesToSlide={2}
         swipeable
       >
-        <CourseCard />
-        <CourseCard />
-        <CourseCard />
-        <CourseCard />
-        <CourseCard />
-        <CourseCard />
-        <CourseCard />
+        <CourseCard key={0} />
+        <CourseCard key={1}/>
+        <CourseCard key={2}/>
+        <CourseCard key={3}/>
+        <CourseCard key={4}/>
+        <CourseCard key={5}/>
+        <CourseCard key={6}/>
       </Carousel>
     </div>
   );
