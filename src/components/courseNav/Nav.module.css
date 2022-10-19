@@ -28,9 +28,9 @@
   font-weight: 750;
 }
 
-.box {
+/* .box {
   display: none;
-}
+} */
 
 @media (min-width: 48rem) {
   .container ul {
