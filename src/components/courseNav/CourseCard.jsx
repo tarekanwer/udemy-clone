@@ -4,6 +4,7 @@ import course from "../../images/course.jpg";
 import Rating from "@mui/material/Rating";
 const rating = 4.6;
 const reviews = 2732;
+const price = 269.99;
 const CourseCard = () => {
   return (
     <div className={classes.container}>
@@ -20,6 +21,10 @@ const CourseCard = () => {
           size="small"
         />
         <p>{`(${reviews})`}</p>
+      </span>
+      <span className={classes.prices}>
+        <h5 className={classes.price}>{`E£${price}`}</h5>
+        <s>{`E£${price}`}</s>
       </span>
     </div>
   );
