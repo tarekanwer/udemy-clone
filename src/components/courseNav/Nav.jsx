@@ -17,6 +17,7 @@ const Nav = () => {
   const [isSelected, setIsSelected] = useState(0);
   const classHandler = (event) => {
     setIsSelected(+event.target.value);
+    console.log(+event.target.value);
   };
   return (
     <Fragment>
@@ -36,10 +37,8 @@ const Nav = () => {
                   value={index}
                 >
                   {item}
-                </button>
-                <div>
                   <ExpandMoreIcon />
-                </div>
+                </button>
               </li>
             );
           })}
