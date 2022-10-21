@@ -17,8 +17,8 @@ const categories = [
 const Nav = () => {
   const [isSelected, setIsSelected] = useState(0);
   const classHandler = (event) => {
+    console.log(event.target.value);
     setIsSelected(+event.target.value);
-    console.log(event.target);
   };
   return (
     <Fragment>
@@ -26,20 +26,22 @@ const Nav = () => {
         <ul>
           {categories.map((item, index) => {
             return (
-              <li key={index}>
+              <li
+                key={index}
+                onClick={classHandler}
+                className={
+                  isSelected === index
+                    ? `${classes.item} ${classes.active}`
+                    : `${classes.item}`
+                }
+                value={index}
+              >
+                {item}
                 <button
-                  key={index}
-                  className={
-                    isSelected === index
-                      ? `${classes.btn} ${classes.active}`
-                      : `${classes.btn}`
-                  }
-                  onClick={classHandler}
+                  key={item}
+                  className={classes.arrow}
                   value={index}
-                >
-                  {item}
-                  <button className={classes.arrow} value={index}></button>
-                </button>
+                ></button>
               </li>
             );
           })}

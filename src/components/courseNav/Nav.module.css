@@ -10,34 +10,22 @@
   padding-inline-start: 0;
   border-top: 1px solid #ccc;
 }
-.container li {
+.item {
   display: flex;
   border-bottom: 1px solid #ccc;
   padding: 1rem;
   justify-content: space-between;
   align-items: center;
-}
-
-.btn {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-right: 0.9rem;
-  padding-left: 0;
-  color: black;
-  border: none;
-  background-color: white;
   font-size: 1rem;
   font-weight: 750;
-  width: 100%;
 }
 .arrow {
   background-image: url("/src/images/arrow.png");
-  background-size: 0.9rem;
+  background-size: contain;
   background-repeat: no-repeat;
   padding: 0;
-  width: 14px;
-  height: 14.48px;
+  width: 12px;
+  aspect-ratio: 1;
   border: none;
   transform: rotate(90deg);
 }
@@ -51,26 +39,21 @@
     margin: 0;
     border-top: none;
   }
-  .container li {
+  .item {
     border-bottom: none;
     padding: 0;
+    padding-right: 0.9rem;
+    padding-left: 0;
+    color: rgb(124, 124, 124);
+    font-size: 1rem;
+    font-weight: 750;
+    cursor: pointer;
   }
   .arrow {
     display: none;
   }
 
-  .btn {
-    padding-right: 0.9rem;
-    padding-left: 0;
-    color: rgb(124, 124, 124);
-    border: none;
-    background-color: white;
-    font-size: 1rem;
-    font-weight: 750;
-    cursor: pointer;
-  }
-
-  .btn:hover {
+  .item:hover {
     color: black;
   }
 
