@@ -1,8 +1,6 @@
 import React, { useState, Fragment } from "react";
 import classes from "./Nav.module.css";
 import CategoryCourses from "./CategoryCourses";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import arrow from "../../images/arrow.png";
 
 const categories = [
   "Python",
@@ -17,8 +15,11 @@ const categories = [
 const Nav = () => {
   const [isSelected, setIsSelected] = useState(0);
   const classHandler = (event) => {
-    console.log(event.target.value);
     setIsSelected(+event.target.value);
+    const item = categories.filter(
+      (cat, index) => index === +event.target.value
+    )[0];
+    console.log(item);
   };
   return (
     <Fragment>
