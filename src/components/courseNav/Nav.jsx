@@ -2,6 +2,7 @@ import React, { useState, Fragment } from "react";
 import classes from "./Nav.module.css";
 import CategoryCourses from "./CategoryCourses";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import arrow from "../../images/arrow.png";
 
 const categories = [
   "Python",
@@ -37,9 +38,7 @@ const Nav = () => {
                   value={index}
                 >
                   {item}
-                  <div className={classes.arrow}>
-                    <ExpandMoreIcon />
-                  </div>
+                  <button className={classes.arrow} value={index}></button>
                 </button>
               </li>
             );

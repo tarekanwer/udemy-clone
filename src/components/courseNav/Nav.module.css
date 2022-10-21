@@ -31,6 +31,16 @@
   font-weight: 750;
   width: 100%;
 }
+.arrow {
+  background-image: url("/src/images/arrow.png");
+  background-size: 0.9rem;
+  background-repeat: no-repeat;
+  padding: 0;
+  width: 14px;
+  height: 14.48px;
+  border: none;
+  transform: rotate(90deg);
+}
 
 @media (min-width: 48rem) {
   .container ul {
