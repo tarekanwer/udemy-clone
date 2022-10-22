@@ -14,11 +14,13 @@ const categories = [
 
 const Nav = () => {
   const [isSelected, setIsSelected] = useState(0);
+  const [open, setOpen] = useState(false);
   const classHandler = (event) => {
     setIsSelected(+event.target.value);
     const item = categories.filter(
       (cat, index) => index === +event.target.value
     )[0];
+    setOpen(true);
     console.log(item);
   };
   return (
@@ -40,7 +42,11 @@ const Nav = () => {
                 {item}
                 <button
                   key={item}
-                  className={classes.arrow}
+                  className={
+                    isSelected === index && open
+                      ? `${classes.arrow} ${classes.act}`
+                      : `${classes.arrow}`
+                  }
                   value={index}
                 ></button>
               </li>
