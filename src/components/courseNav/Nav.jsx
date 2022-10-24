@@ -24,29 +24,42 @@ const Nav = () => {
   return (
     <Fragment>
       <nav className={classes.container}>
-        <ul>
+        <ul className={classes.list}>
           {categories.map((item, index) => {
             return (
-              <li
-                key={index}
-                onClick={classHandler}
-                className={
-                  isSelected === index
-                    ? `${classes.item} ${classes.active}`
-                    : `${classes.item}`
-                }
-                value={index}
-              >
-                {item}
-                <button
-                  key={item}
-                  className={
-                    isSelected === index 
-                      ? `${classes.arrow} ${classes.act}`
-                      : `${classes.arrow}`
-                  }
-                  value={index}
-                ></button>
+              <li key={index}>
+                <ul className={classes.item__list}>
+                  <li
+                    key={index}
+                    onClick={classHandler}
+                    className={
+                      isSelected === index
+                        ? `${classes.item} ${classes.active}`
+                        : `${classes.item}`
+                    }
+                    value={index}
+                  >
+                    {item}
+                    <button
+                      key={item}
+                      className={
+                        isSelected === index
+                          ? `${classes.arrow} ${classes.act}`
+                          : `${classes.arrow}`
+                      }
+                      value={index}
+                    ></button>
+                  </li>
+                  <li
+                    className={
+                      isSelected === index
+                        ? `${classes.show}`
+                        : `${classes.hide}`
+                    }
+                  >
+                    <CategoryCourses />
+                  </li>
+                </ul>
               </li>
             );
           })}

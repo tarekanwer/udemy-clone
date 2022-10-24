@@ -3,16 +3,25 @@
   padding-left: 0.3rem;
 }
 
-.container ul {
+.list {
   display: flex;
   flex-direction: column;
   list-style: none;
   padding-inline-start: 0;
   border-top: 1px solid #ccc;
 }
+
+.list > li {
+  border-bottom: 1px solid #ccc;
+}
+
+.item__list {
+  display: flex;
+  flex-direction: column;
+  padding-inline-start: 0;
+}
 .item {
   display: flex;
-  border-bottom: 1px solid #ccc;
   padding: 1rem;
   justify-content: space-between;
   align-items: center;
@@ -34,8 +43,16 @@
   transform: rotate(270deg);
 }
 
+.show {
+  display: initial;
+  margin-bottom: 1rem;
+}
+.hide {
+  display: none;
+}
+
 @media (min-width: 48rem) {
-  .container ul {
+  .list {
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
