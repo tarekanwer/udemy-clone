@@ -41,7 +41,7 @@
 }
 
 .act {
-  transform: rotateZ(270deg);
+  transform: rotateZ(-90deg);
 }
 
 .show {
@@ -51,7 +51,9 @@
 .hide {
   display: none;
 }
-
+.box{
+  display: none;
+}
 @media (min-width: 48rem) {
   .list {
     flex-direction: row;
