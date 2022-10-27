@@ -88,4 +88,10 @@
     border: 1px #ccc solid;
     padding: 2rem;
   }
+  .show {
+    display: none;
+  }
+  .list > li {
+    border-bottom: none;
+  }
 }
