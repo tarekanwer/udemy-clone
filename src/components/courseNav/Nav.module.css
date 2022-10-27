@@ -37,10 +37,11 @@
   aspect-ratio: 1;
   border: none;
   transform: rotate(90deg);
+  transition: all 0.3s ease;
 }
 
 .act {
-  transform: rotate(270deg);
+  transform: rotateZ(270deg);
 }
 
 .show {
