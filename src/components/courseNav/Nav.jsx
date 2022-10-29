@@ -14,7 +14,9 @@ const categories = [
 
 const Nav = () => {
   const [isSelected, setIsSelected] = useState(0);
+  const [open, setIsOpen] = useState(true);
   const classHandler = (event) => {
+    setIsOpen(!open);
     setIsSelected(+event.target.value);
     const item = categories.filter(
       (cat, index) => index === +event.target.value
@@ -33,7 +35,7 @@ const Nav = () => {
                     key={index}
                     onClick={classHandler}
                     className={
-                      isSelected === index
+                      isSelected === index && open
                         ? `${classes.item} ${classes.active}`
                         : `${classes.item}`
                     }
@@ -43,7 +45,7 @@ const Nav = () => {
                     <button
                       key={item}
                       className={
-                        isSelected === index
+                        isSelected === index && open
                           ? `${classes.arrow} ${classes.act}`
                           : `${classes.arrow}`
                       }
@@ -52,7 +54,7 @@ const Nav = () => {
                   </li>
                   <li
                     className={
-                      isSelected === index
+                      isSelected === index && open
                         ? `${classes.show}`
                         : `${classes.hide}`
                     }
