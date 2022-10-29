@@ -47,17 +47,16 @@ const CategoryCourses = () => {
         autoPlaySpeed={3000}
         centerMode={false}
         className=""
-        containerClass="container"
         dotListClass=""
         draggable
         focusOnSelect={false}
-        infinite={false}
-        itemClass=""
+        itemClass="carousel-item-padding-10-px"
+        containerClass="carousel-container"
         keyBoardControl
         minimumTouchDrag={80}
         pauseOnHover
         renderArrowsWhenDisabled={false}
-        renderButtonGroupOutside={false}
+        renderButtonGroupOutside={true}
         renderDotsOutside={false}
         responsive={responsive}
         rewind={false}
@@ -66,16 +65,19 @@ const CategoryCourses = () => {
         shouldResetAutoplay
         showDots={false}
         sliderClass=""
-        slidesToSlide={2}
+        slidesToSlide={1}
         swipeable
+        sx={{
+          gap: "1rem",
+        }}
       >
         <CourseCard key={0} />
-        <CourseCard key={1}/>
-        <CourseCard key={2}/>
-        <CourseCard key={3}/>
-        <CourseCard key={4}/>
-        <CourseCard key={5}/>
-        <CourseCard key={6}/>
+        <CourseCard key={1} />
+        <CourseCard key={2} />
+        <CourseCard key={3} />
+        <CourseCard key={4} />
+        <CourseCard key={5} />
+        <CourseCard key={6} />
       </Carousel>
     </div>
   );
