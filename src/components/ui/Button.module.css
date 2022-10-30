@@ -1,0 +1,18 @@
+.btn {
+  display: initial;
+  height: 45px;
+  border: 1px solid #1c1d1f;
+  background-color: transparent;
+  padding: 0 auto;
+  margin: 1rem 0.2rem;
+  font-weight: 800;
+  font-size: 0.9rem;
+  font-stretch: 100%;
+  min-width: auto;
+  white-space: pre-wrap;
+  width: 12vw;
+}
+
+.btn:hover {
+  background-color: rgb(241, 241, 241);
+}

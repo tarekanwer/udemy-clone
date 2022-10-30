@@ -1,6 +1,7 @@
 import React, { useState, Fragment } from "react";
 import classes from "./Nav.module.css";
 import CategoryCourses from "./CategoryCourses";
+import Button from "../ui/Button";
 
 const categories = [
   "Python",
@@ -68,6 +69,16 @@ const Nav = () => {
         </ul>
       </nav>
       <div className={classes.box}>
+        <h1>Expand your career opportunities with Python</h1>
+        <p>
+          Take one of Udemy’s range of Python courses and learn how to code
+          using this incredibly useful language. Its simple syntax and
+          readability makes Python perfect for Flask, Django, data science, and
+          machine learning. You’ll learn how to build everything from games to
+          sites to apps. Choose from a range of courses that will appeal to both
+          beginners and advanced developers alike.
+        </p>
+        <Button>Explore Python</Button>
         <CategoryCourses />
       </div>
     </Fragment>
