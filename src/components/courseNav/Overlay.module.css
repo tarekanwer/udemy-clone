@@ -1,3 +1,39 @@
 .container {
-    background-color: white;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+.tri {
+  width: 30px;
+  height: 20px;
+  background-color: black;
+  background-size: cover;
+  clip-path: polygon(0 50%, 50% 0%, 50% 100%);
+  margin-right: -1.01rem;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 10px 10px 5px grey;
+}
+.tri2 {
+  width: 31px;
+  height: 19px;
+  background-color: white;
+  clip-path: polygon(1% 50%, 50% 1%, 50% 99%);
+  z-index: 1;
+}
+.content {
+  width: 20vw;
+  height: 20vh;
+  background-color: white;
+  color: black;
+  box-shadow: 0px 10px 5px grey;
+  border: 1px solid gray;
+  padding: 1rem;
+  width: 12rem;
+  height: 20rem;
 }
