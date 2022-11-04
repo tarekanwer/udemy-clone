@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import classes from "./CourseCard.module.css";
 import course from "../../images/course.jpg";
 import Rating from "@mui/material/Rating";
+import { ColorLensOutlined } from "@mui/icons-material";
 
 const rating = 4.6;
 const reviews = 2732;
@@ -9,11 +10,16 @@ const price = 269.99;
 const CourseCard = (props) => {
   // const [show, setShow] = useState(false);
   const hoverHandler = (event) => {
+    if (event.target.tagName === "IMG") {
+      console.log(event.view.scrollY);
+      console.log(event.target.tagName);
+    }
     props.onHover({
       x: event.screenX,
       y: event.screenY,
       width: event.currentTarget.offsetWidth,
       height: event.currentTarget.offsetHeight,
+      startY: event.view.scrollY,
     });
   };
   return (

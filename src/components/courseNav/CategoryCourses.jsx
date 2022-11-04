@@ -41,7 +41,7 @@ const responsive = {
 
 const CategoryCourses = () => {
   const onHoverHandler = (item) => {
-    console.log(item);
+    // console.log(item);
   };
   return (
     <div className={classes.container}>
