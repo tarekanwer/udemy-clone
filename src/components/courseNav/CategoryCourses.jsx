@@ -3,7 +3,7 @@ import classes from "./CategoryCourses.module.css";
 import CourseCard from "./CourseCard";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import Overlay from ".Overlay/";
+import Overlay from "./Overlay";
 
 const responsive = {
   b6: {
@@ -40,6 +40,9 @@ const responsive = {
 };
 
 const CategoryCourses = () => {
+  const onHoverHandler = (item) => {
+    console.log(item);
+  };
   return (
     <div className={classes.container}>
       <Carousel
@@ -72,13 +75,13 @@ const CategoryCourses = () => {
           gap: "1rem",
         }}
       >
-        <CourseCard key={0} />
-        <CourseCard key={1} />
-        <CourseCard key={2} />
-        <CourseCard key={3} />
-        <CourseCard key={4} />
-        <CourseCard key={5} />
-        <CourseCard key={6} />
+        <CourseCard key={0} onHover={onHoverHandler} />
+        <CourseCard key={1} onHover={onHoverHandler} />
+        <CourseCard key={2} onHover={onHoverHandler} />
+        <CourseCard key={3} onHover={onHoverHandler} />
+        <CourseCard key={4} onHover={onHoverHandler} />
+        <CourseCard key={5} onHover={onHoverHandler} />
+        <CourseCard key={6} onHover={onHoverHandler} />
       </Carousel>
       <Overlay>This is the overlay</Overlay>
     </div>

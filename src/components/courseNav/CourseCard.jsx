@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import classes from "./CourseCard.module.css";
 import course from "../../images/course.jpg";
 import Rating from "@mui/material/Rating";
@@ -6,10 +6,19 @@ import Rating from "@mui/material/Rating";
 const rating = 4.6;
 const reviews = 2732;
 const price = 269.99;
-const CourseCard = () => {
+const CourseCard = (props) => {
+  // const [show, setShow] = useState(false);
+  const hoverHandler = (event) => {
+    props.onHover({
+      x: event.screenX,
+      y: event.screenY,
+      width: event.currentTarget.offsetWidth,
+      height: event.currentTarget.offsetHeight,
+    });
+  };
   return (
     // <div className={classes.flex}>
-    <div className={classes.container}>
+    <div className={classes.container} onMouseOver={hoverHandler}>
       <img src={course} alt="course" />
       <h3>Learn Python</h3>
       <p>Avinash Jain, The Codex</p>
