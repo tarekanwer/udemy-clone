@@ -10,20 +10,9 @@ const price = 269.99;
 const CourseCard = (props) => {
   // const [show, setShow] = useState(false);
   const hoverHandler = (event) => {
-    if (event.target.tagName === "IMG") {
-      console.log(event.view.scrollY);
-      console.log(event.target.tagName);
-    }
-    props.onHover({
-      x: event.screenX,
-      y: event.screenY,
-      width: event.currentTarget.offsetWidth,
-      height: event.currentTarget.offsetHeight,
-      startY: event.view.scrollY,
-    });
+    props.onHover(event.currentTarget.getBoundingClientRect());
   };
   return (
-    // <div className={classes.flex}>
     <div className={classes.container} onMouseOver={hoverHandler}>
       <img src={course} alt="course" />
       <h3>Learn Python</h3>
