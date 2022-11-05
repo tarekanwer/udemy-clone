@@ -3,7 +3,6 @@ import classes from "./CategoryCourses.module.css";
 import CourseCard from "./CourseCard";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import Overlay from "./Overlay";
 
 const responsive = {
   b6: {
@@ -83,7 +82,6 @@ const CategoryCourses = () => {
         <CourseCard key={5} onHover={onHoverHandler} />
         <CourseCard key={6} onHover={onHoverHandler} />
       </Carousel>
-      <Overlay>This is the overlay</Overlay>
     </div>
   );
 };

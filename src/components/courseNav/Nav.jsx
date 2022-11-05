@@ -2,6 +2,7 @@ import React, { useState, Fragment } from "react";
 import classes from "./Nav.module.css";
 import CategoryCourses from "./CategoryCourses";
 import Button from "../ui/Button";
+import Overlay from "./Overlay";
 
 const categories = [
   "Python",
@@ -81,6 +82,7 @@ const Nav = () => {
         <Button>Explore Python</Button>
         <CategoryCourses />
       </div>
+      <Overlay>This is the overlay</Overlay>
     </Fragment>
   );
 };
