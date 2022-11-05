@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import classes from "./CourseCard.module.css";
 import course from "../../images/course.jpg";
 import Rating from "@mui/material/Rating";
-import { ColorLensOutlined } from "@mui/icons-material";
 
 const rating = 4.6;
 const reviews = 2732;
