@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import classes from "./CourseCard.module.css";
 import course from "../../images/course.jpg";
 import Rating from "@mui/material/Rating";
@@ -7,7 +7,6 @@ const rating = 4.6;
 const reviews = 2732;
 const price = 269.99;
 const CourseCard = (props) => {
-  // const [show, setShow] = useState(false);
   const hoverHandler = (event) => {
     props.onHover(event.currentTarget.getBoundingClientRect());
   };

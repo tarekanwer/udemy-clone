@@ -10,27 +10,6 @@
   height: 20rem;
   z-index: 1000;
 }
-
-/* .tri {
-  width: 30px;
-  height: 20px;
-  background-color: black;
-  background-size: cover;
-  clip-path: polygon(0 50%, 50% 0%, 50% 100%);
-  margin-right: -1.01rem;
-  z-index: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 2px 2px 5px grey;
-}
-.tri2 {
-  width: 31px;
-  height: 19px;
-  background-color: white;
-  clip-path: polygon(1% 50%, 50% 1%, 50% 99%);
-  z-index: 1;
-} */
 .content {
   box-sizing: border-box;
   clip-path: polygon(5% 0, 100% 0%, 100% 100%, 5% 100%, 5% 47.5%, 0 45%, 5% 42.5%);
