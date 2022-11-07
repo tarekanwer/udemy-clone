@@ -2,16 +2,26 @@ import React from "react";
 import classes from "./CourseCard.module.css";
 import course from "../../images/course.jpg";
 import Rating from "@mui/material/Rating";
+import { useDispatch } from "react-redux";
 
 const rating = 4.6;
 const reviews = 2732;
 const price = 269.99;
 const CourseCard = (props) => {
+  const dispatch = useDispatch();
   const hoverHandler = (event) => {
-    props.onHover(event.currentTarget.getBoundingClientRect());
+    const item = event.currentTarget.getBoundingClientRect();
+    dispatch({ type: "show", position: item });
+  };
+  const closeHandler = () => {
+    dispatch({ type: "hide" });
   };
   return (
-    <div className={classes.container} onMouseOver={hoverHandler}>
+    <div
+      className={classes.container}
+      onMouseOver={hoverHandler}
+      onMouseLeave={closeHandler}
+    >
       <img src={course} alt="course" />
       <h3>Learn Python</h3>
       <p>Avinash Jain, The Codex</p>
