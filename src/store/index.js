@@ -1,11 +1,11 @@
 import { createStore } from "redux";
-const initState = { position: {}, showOverlay: false };
+const initState = { x: 0, y: 0, showOverlay: false };
 
 const overlayReducer = (state = initState, action) => {
   if (action.type === "show") {
     let position = action.position;
-    let x = position.right - position.width;
-    let y = position.bottom + position.height * 0.5;
+    let x = position.right * 1.02;
+    let y = position.bottom * 1.1;
     return {
       x,
       y,

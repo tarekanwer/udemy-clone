@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useMemo } from "react";
 import ReactDom from "react-dom";
 import { useSelector } from "react-redux";
 import classes from "./Overlay.module.css";
@@ -8,7 +8,7 @@ let styles;
 const Overlay = (props) => {
   let x = useSelector((state) => state.x);
   let y = useSelector((state) => state.y);
-  useEffect(() => {
+  useMemo(() => {
     styles = {
       position: "absolute",
       top: `${y}px`,

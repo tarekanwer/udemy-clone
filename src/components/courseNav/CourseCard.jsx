@@ -11,6 +11,7 @@ const CourseCard = (props) => {
   const dispatch = useDispatch();
   const hoverHandler = (event) => {
     const item = event.currentTarget.getBoundingClientRect();
+    console.log(item);
     dispatch({ type: "show", position: item });
   };
   const closeHandler = () => {
