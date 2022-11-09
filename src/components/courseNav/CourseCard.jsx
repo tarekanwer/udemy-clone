@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import classes from "./CourseCard.module.css";
 import course from "../../images/course.jpg";
 import Rating from "@mui/material/Rating";
@@ -17,6 +17,21 @@ const CourseCard = (props) => {
   const closeHandler = () => {
     dispatch({ type: "hide" });
   };
+  useEffect(() => {
+    //  get global mouse coordinates
+    const handleWindowMouseMove = (event) => {
+      const x = event.screenX;
+      const y = event.screenY;
+      const cords = { x, y };
+      dispatch({ type: "get", cords: cords });
+      dispatch({ type: "hide" });
+    };
+    window.addEventListener("mousemove", handleWindowMouseMove);
+
+    return () => {
+      window.removeEventListener("mousemove", handleWindowMouseMove);
+    };
+  }, [dispatch]);
   return (
     <div
       className={classes.container}
