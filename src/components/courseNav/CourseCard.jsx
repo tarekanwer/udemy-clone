@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import classes from "./CourseCard.module.css";
 import course from "../../images/course.jpg";
 import Rating from "@mui/material/Rating";
@@ -12,26 +12,12 @@ const CourseCard = (props) => {
   const hoverHandler = (event) => {
     const item = event.currentTarget.getBoundingClientRect();
     console.log(item);
-    dispatch({ type: "show", position: item });
+    dispatch({ type: "show", position: item, hoverCard: true });
   };
   const closeHandler = () => {
-    dispatch({ type: "hide" });
+    dispatch({ type: "hide", hoverCard: false });
   };
-  useEffect(() => {
-    //  get global mouse coordinates
-    const handleWindowMouseMove = (event) => {
-      const x = event.screenX;
-      const y = event.screenY;
-      const cords = { x, y };
-      dispatch({ type: "get", cords: cords });
-      dispatch({ type: "hide" });
-    };
-    window.addEventListener("mousemove", handleWindowMouseMove);
 
-    return () => {
-      window.removeEventListener("mousemove", handleWindowMouseMove);
-    };
-  }, [dispatch]);
   return (
     <div
       className={classes.container}

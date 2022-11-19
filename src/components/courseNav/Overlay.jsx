@@ -18,7 +18,11 @@ const Overlay = (props) => {
     };
   }, [x, y]);
   const hoverHandler = () => {
-    dispatch({ type: "show" });
+    dispatch({ type: "show" , hoverOverlay : true });
+  };
+
+  const leaveHandler = () => {
+    dispatch({type: "hide" , hoverOverlay : false});
   };
 
   return ReactDom.createPortal(
@@ -26,6 +30,7 @@ const Overlay = (props) => {
       className={classes.container}
       style={styles}
       onMouseMove={hoverHandler}
+      onMouseLeave = {leaveHandler}
     >
       <div className={classes.content}>{props.children}</div>
     </div>,
