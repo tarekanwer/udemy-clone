@@ -2,8 +2,6 @@ import React, { useState, Fragment } from "react";
 import classes from "./Nav.module.css";
 import CategoryCourses from "./CategoryCourses";
 import Button from "../ui/Button";
-import { useSelector } from "react-redux";
-import Overlay from "./Overlay";
 
 const categories = [
   "Python",
@@ -18,7 +16,6 @@ const categories = [
 const Nav = () => {
   const [isSelected, setIsSelected] = useState(0);
   const [open, setIsOpen] = useState(true);
-  let show = useSelector((state) => state.showOverlay);
   const classHandler = (event) => {
     setIsOpen(!open);
     setIsSelected(+event.target.value);
@@ -84,7 +81,6 @@ const Nav = () => {
         <Button>Explore Python</Button>
         <CategoryCourses />
       </div>
-      {show && <Overlay>This is the overlay</Overlay>}
     </Fragment>
   );
 };

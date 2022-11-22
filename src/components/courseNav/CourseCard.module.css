@@ -62,7 +62,6 @@
   padding-right: 0.4rem;
 }
 
-
 .prices s {
   margin: 0;
   font-size: 0.85rem;
@@ -96,8 +95,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}*/
+
+/* .container .overlay {
+  visibility: hidden;
 }
-.overlay {
-  margin-right: 1rem;
-  z-index: 100;
+
+.container .overlay::after {
+  visibility: visible;
+}
+.container:hover .overlay {
+  visibility: visible;
 } */
