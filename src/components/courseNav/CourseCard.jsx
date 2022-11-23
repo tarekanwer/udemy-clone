@@ -7,6 +7,18 @@ import { styled } from "@mui/material/styles";
 import Tooltip, { tooltipClasses } from "@mui/material/Tooltip";
 import Overlay from "./Overlay";
 
+const CustomTooltip = styled(({ className, ...props }) => (
+  <Tooltip {...props} classes={{ popper: className }} />
+))(({ theme }) => ({
+  [`& .${tooltipClasses.tooltip}`]: {
+    backgroundColor: theme.palette.common.white,
+    color: "rgba(0, 0, 0, 0.87)",
+    boxShadow: theme.shadows[0],
+    fontSize: 11,
+  },
+}));
+
+
 const rating = 4.6;
 const reviews = 2732;
 const price = 269.99;
@@ -17,20 +29,8 @@ const CourseCard = (props) => {
     console.log(item);
     dispatch({ type: "show", position: item });
   };
-
-  const CustomTooltip = styled(({ className, ...props }) => (
-    <Tooltip {...props} classes={{ popper: className }} />
-  ))(({ theme }) => ({
-    [`& .${tooltipClasses.tooltip}`]: {
-      backgroundColor: theme.palette.common.white,
-      color: "rgba(0, 0, 0, 0.87)",
-      boxShadow: theme.shadows[0],
-      fontSize: 11,
-    },
-  }));
-
   return (
-    <CustomTooltip title={<Overlay>This is the overlay</Overlay>}>
+    <CustomTooltip title={<Overlay/>}>
       <div className={classes.container} onMouseOver={hoverHandler}>
         <img src={course} alt="course" />
         <h3>Learn Python</h3>
