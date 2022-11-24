@@ -8,7 +8,7 @@ const overlayReducer = (state = initState, action) => {
   if (action.type === "show") {
     let position = action.position;
     let x = position.right * 1.01 ;
-    let y = 750;
+    let y = 745;
     return {
       x,
       y,

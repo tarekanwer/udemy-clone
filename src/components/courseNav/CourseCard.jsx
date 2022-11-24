@@ -18,7 +18,6 @@ const CustomTooltip = styled(({ className, ...props }) => (
   },
 }));
 
-
 const rating = 4.6;
 const reviews = 2732;
 const price = 269.99;
@@ -30,9 +29,11 @@ const CourseCard = (props) => {
     dispatch({ type: "show", position: item });
   };
   return (
-    <CustomTooltip title={<Overlay/>}>
+    <CustomTooltip title={<Overlay />}>
       <div className={classes.container} onMouseOver={hoverHandler}>
+        <div className={classes.overlay}></div>
         <img src={course} alt="course" />
+
         <h3>Learn Python</h3>
         <p>Avinash Jain, The Codex</p>
         <span className={classes.rating}>
