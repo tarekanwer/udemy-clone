@@ -2,9 +2,8 @@ import React, { useMemo } from "react";
 import ReactDom from "react-dom";
 import { useSelector } from "react-redux";
 import classes from "./Overlay.module.css";
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-import DoneIcon from '@mui/icons-material/Done';
-
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import DoneIcon from "@mui/icons-material/Done";
 
 let styles;
 
@@ -32,16 +31,29 @@ const Overlay = (props) => {
           like Python GUI, Python Data Analysis, and more!{" "}
         </h4>
         <ul>
-          <li><DoneIcon /> <h6>Create their own Python Programs</h6></li>
-          <li><DoneIcon/> <h6>Become an experienced Python Programmer</h6></li>
-          <li><DoneIcon/> <h6>Parse the Web and create their own Games</h6></li>
+          <li>
+            <DoneIcon sx={{ width: "1.15rem", height: "1.15rem" }} />{" "}
+            <h6>Create their own Python Programs</h6>
+          </li>
+          <li>
+            <DoneIcon sx={{ width: "1.15rem", height: "1.15rem" }} />{" "}
+            <h6>Become an experienced Python Programmer</h6>
+          </li>
+          <li>
+            <DoneIcon sx={{ width: "1.15rem", height: "1.15rem" }} />{" "}
+            <h6>Parse the Web and create their own Games</h6>
+          </li>
         </ul>
         <span>
-          <button className={classes.cart}>Add to the Cart</button>
-          <button className={classes.fav}><FavoriteBorderIcon sx = {{
-          width : "1.8rem",
-          height : "1.8rem",
-          }}/></button>
+          <button className={classes.cart}>Add the cart</button>
+          <button className={classes.fav}>
+            <FavoriteBorderIcon
+              sx={{
+                width: "1.8rem",
+                height: "1.8rem",
+              }}
+            />
+          </button>
         </span>
       </div>
     </div>,
