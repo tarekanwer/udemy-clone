@@ -17,7 +17,7 @@
   background-color: transparent;
 }
 
-.overlay:hover{
+.container:hover .overlay{
   background-color: rgb(167, 167, 167);
 }
 .container img {
