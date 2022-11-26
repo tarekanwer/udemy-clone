@@ -13,12 +13,12 @@
   position: absolute;
   opacity: 0.5;
   height: 153px;
-  width: 17vw;
+  width: auto;
   background-color: transparent;
 }
 
 .container:hover .overlay{
-  background-color: rgb(167, 167, 167);
+  background-color: rgba(167, 167, 167, 0.5);
 }
 .container img {
   width: 100%;
@@ -42,12 +42,13 @@
 .rating {
   display: flex;
   justify-content: flex-start;
-  align-items: middle;
+  align-items: center;
 }
 
 .rating h6 {
   margin: 0;
   padding-right: 0.5rem;
+  margin-bottom: 0.3rem;
   color: #b4690e;
   font-size: 0.85rem;
 }
@@ -62,7 +63,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: baseline;
-  padding-top: 0.6rem;
+  padding-top: 0.2rem;
 }
 
 .prices h5 {

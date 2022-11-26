@@ -1,0 +1,111 @@
+.container {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  filter: drop-shadow(0.2rem 0.2rem 0.8rem rgba(0, 0, 0, 0.5));
+  align-items: center;
+  margin-top: 5rem;
+  width: 20rem;
+  height: auto;
+  /* z-index: 1000; */
+}
+.content {
+  box-sizing: border-box;
+  /* clip-path: polygon(5% 0, 100% 0%, 100% 100%, 5% 100%, 5% 47%, 0 45%, 5% 43%); */
+  clip-path: polygon(0% 0%, 95% 0, 95% 43%, 100% 45%, 95% 47%, 95% 100%, 0 100%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: white;
+  color: black;
+  width: 100%;
+  height: 100%;
+  padding: 1rem 2.5rem 1rem 0.9rem;
+}
+
+.content h1 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.content h1:hover {
+  color: #5624d0;
+}
+
+.content h5 {
+  color: green;
+  font-size: 0.7rem;
+  margin: 0;
+  padding-top: 0.3rem;
+  font-weight: 500;
+}
+.content b {
+  font-weight: 700;
+}
+
+div h6 {
+  margin: 0;
+  padding-top: 0.4rem;
+  color: gray;
+}
+
+.content h4 {
+  margin: 0;
+  padding-top: 0.4rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.content ul {
+  list-style: none;
+  padding-left: 0.3rem;
+}
+
+.content li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.2rem;
+}
+
+.content li h6 {
+  margin: 0;
+  padding-left: 0.6rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: black;
+}
+
+.content span {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.cart {
+  border: 1px solid black;
+  background-color: blueviolet;
+  color: white;
+  width: 12rem;
+  height: 3rem;
+}
+
+.cart:hover {
+  background-color: rgb(119, 38, 196);
+}
+
+.fav {
+  border: 1px solid black;
+  background-color: white;
+  aspect-ratio: 1;
+  width: 3.4rem;
+  border-radius: 1.7rem;
+  padding-top: 0.3rem;
+  margin-right: 0.5rem;
+}
+
+.fav:hover {
+  background-color: rgb(240, 240, 240);
+}

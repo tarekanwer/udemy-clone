@@ -5,7 +5,7 @@ import Rating from "@mui/material/Rating";
 import { useDispatch } from "react-redux";
 import { styled } from "@mui/material/styles";
 import Tooltip, { tooltipClasses } from "@mui/material/Tooltip";
-import Overlay from "./Overlay";
+import ROverlay from "./ROverlay";
 
 const CustomTooltip = styled(({ className, ...props }) => (
   <Tooltip {...props} classes={{ popper: className }} />
@@ -29,7 +29,7 @@ const CourseCard = (props) => {
     dispatch({ type: "show", position: item });
   };
   return (
-    <CustomTooltip title={<Overlay />}>
+    <CustomTooltip title={<ROverlay />}>
       <div className={classes.container} onMouseOver={hoverHandler}>
         <div className={classes.overlay}></div>
         <img src={course} alt="course" />
@@ -44,6 +44,9 @@ const CourseCard = (props) => {
             precision={0.1}
             readOnly
             size="small"
+            sx = {{
+              marginTop : ".1rem"
+            }}
           />
           <p>{`(${reviews})`}</p>
         </span>
