@@ -1,11 +1,13 @@
-import React from "react";
+import React, { Fragment } from "react";
 import classes from "./CourseCard.module.css";
 import course from "../../images/course.jpg";
 import Rating from "@mui/material/Rating";
 import { useDispatch } from "react-redux";
 import { styled } from "@mui/material/styles";
 import Tooltip, { tooltipClasses } from "@mui/material/Tooltip";
+import { useSelector } from "react-redux";
 import ROverlay from "./ROverlay";
+import Overlay from "./Overlay";
 
 const CustomTooltip = styled(({ className, ...props }) => (
   <Tooltip {...props} classes={{ popper: className }} />
@@ -25,11 +27,31 @@ const CourseCard = (props) => {
   const dispatch = useDispatch();
   const hoverHandler = (event) => {
     const item = event.currentTarget.getBoundingClientRect();
-    console.log(item);
-    dispatch({ type: "show", position: item });
+    const width = window.innerWidth;
+    const x = event.clientX;
+    const overlay = x > 0.6 * width ? "R" : "L";
+    dispatch({
+      type: "show",
+      position: item,
+      overlay: overlay,
+    });
   };
+  let R = useSelector((state) => state.R);
+  let L = useSelector((state) => state.L);
+
+  const overlaySelector = (R, L) => {
+    return (
+      <Fragment>
+        {<ROverlay /> && R}
+        {<Overlay /> && L}
+      </Fragment>
+    );
+  };
+
+  console.log(overlaySelector(R, L));
+
   return (
-    <CustomTooltip title={<ROverlay />}>
+    <CustomTooltip title={overlaySelector(R, L)}>
       <div className={classes.container} onMouseOver={hoverHandler}>
         <div className={classes.overlay}></div>
         <img src={course} alt="course" />
@@ -44,8 +66,8 @@ const CourseCard = (props) => {
             precision={0.1}
             readOnly
             size="small"
-            sx = {{
-              marginTop : ".1rem"
+            sx={{
+              marginTop: ".1rem",
             }}
           />
           <p>{`(${reviews})`}</p>
