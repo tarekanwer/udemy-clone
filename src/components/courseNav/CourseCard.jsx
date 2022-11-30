@@ -42,8 +42,8 @@ const CourseCard = (props) => {
   const overlaySelector = (R, L) => {
     return (
       <Fragment>
-        {<ROverlay /> && R}
-        {<Overlay /> && L}
+        {R && <ROverlay />}
+        {L && <Overlay />}
       </Fragment>
     );
   };
