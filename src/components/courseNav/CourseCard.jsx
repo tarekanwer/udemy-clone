@@ -48,7 +48,7 @@ const CourseCard = (props) => {
     );
   };
 
-  console.log(overlaySelector(R, L));
+  // console.log(overlaySelector(R, L));
 
   return (
     <CustomTooltip title={overlaySelector(R, L)}>
