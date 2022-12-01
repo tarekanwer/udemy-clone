@@ -4,9 +4,6 @@
   justify-content: flex-start;
   align-items: flex-start;
   width: 32vw;
-  /* max-width: 20rem;*/
-  /* min-width: 12.3rem;  */
-
   cursor: pointer;
   z-index: 1;
 }
