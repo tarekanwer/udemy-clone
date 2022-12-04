@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 2rem;
+}
+.container h1 {
+    align-self: flex-start;
+    margin: 0;
+    font-size: 1.3rem;
+}

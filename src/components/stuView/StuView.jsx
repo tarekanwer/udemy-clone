@@ -1,8 +1,12 @@
 import React from "react";
 import classes from "./StuView.module.css";
+import CategoryCourses from "../courseNav/CategoryCourses";
 
 const StuView = () => {
-  return <div>StuView</div>;
+  return <div className={classes.container}>
+    <h1>Students are viewing</h1>
+    <CategoryCourses/>
+  </div>;
 };
 
 export default StuView;
