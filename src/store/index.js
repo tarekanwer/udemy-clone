@@ -29,7 +29,7 @@ const overlayReducer = (state = initState, action) => {
       y,
       xn,
       R,
-      L
+      L,
     };
   }
   return state;
