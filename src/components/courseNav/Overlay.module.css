@@ -2,30 +2,29 @@
   background-color: transparent;
   display: flex;
   justify-content: center;
-  filter: drop-shadow(0.2rem 0.2rem 0.8rem rgba(0, 0, 0, 0.5));
   align-items: center;
   margin-top: 5rem;
   width: 20rem;
   height: auto;
-  /* z-index: 1000; */
+}
+.border {
+  clip-path: polygon(5% 0, 100% 0%, 100% 100%, 5% 100%, 5% 47%, 0 45%, 5% 43%);
+  background: rgba(0, 0, 0, 0.6);
+  box-sizing: border-box;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  padding: 0.03rem;
 }
 .content {
   box-sizing: border-box;
-  clip-path: polygon(
-    5% 0,
-    100% 0%,
-    100% 100%,
-    5% 100%,
-    5% 47%,
-    0 45%,
-    5% 43%
-  );
+  clip-path: polygon(5% 0, 100% 0%, 100% 100%, 5% 100%, 5% 47%, 0 45%, 5% 43%);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   background-color: white;
   color: black;
-  width: 100%;
+  width: 99.8%;
   height: 100%;
   padding: 1rem 0.8rem 1rem 2.5rem;
 }
@@ -98,7 +97,7 @@ div h6 {
   height: 3rem;
 }
 
-.cart:hover{
+.cart:hover {
   background-color: rgb(119, 38, 196);
 }
 
@@ -112,6 +111,6 @@ div h6 {
   margin-right: 0.5rem;
 }
 
-.fav:hover{
+.fav:hover {
   background-color: rgb(240, 240, 240);
 }
