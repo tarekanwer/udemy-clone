@@ -29,6 +29,8 @@ const CourseCard = (props) => {
     const item = event.currentTarget.getBoundingClientRect();
     const width = window.innerWidth;
     const x = event.clientX;
+    console.log(event.clientY);
+    console.log(item.y);
     const overlay = x > 0.6 * width ? "R" : "L";
     dispatch({
       type: "show",
