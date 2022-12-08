@@ -12,7 +12,7 @@ const overlayReducer = (state = initState, action) => {
     let position = action.position;
     let x = position.right * 1.01;
     let xn = position.left - 330;
-    let y = 745;
+    // let y = 745;
     let overlay = action.overlay;
     let R;
     let L;
@@ -26,7 +26,6 @@ const overlayReducer = (state = initState, action) => {
     }
     return {
       x,
-      y,
       xn,
       R,
       L,

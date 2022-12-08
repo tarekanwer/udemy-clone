@@ -12,7 +12,7 @@ const categories = [
   "AWS Certification",
   "Drawing",
 ];
-
+const y = 745;
 const Nav = () => {
   const [isSelected, setIsSelected] = useState(0);
   const [open, setIsOpen] = useState(true);
@@ -60,7 +60,7 @@ const Nav = () => {
                         : `${classes.hide}`
                     }
                   >
-                    <CategoryCourses />
+                    <CategoryCourses/>
                   </li>
                 </ul>
               </li>
@@ -79,7 +79,7 @@ const Nav = () => {
           beginners and advanced developers alike.
         </p>
         <Button>Explore Python</Button>
-        <CategoryCourses />
+        <CategoryCourses y = {y} />
       </div>
     </Fragment>
   );

@@ -25,6 +25,7 @@ const reviews = 2732;
 const price = 269.99;
 const CourseCard = (props) => {
   const dispatch = useDispatch();
+  const y = props.y;
   const hoverHandler = (event) => {
     const item = event.currentTarget.getBoundingClientRect();
     const width = window.innerWidth;
@@ -42,8 +43,8 @@ const CourseCard = (props) => {
   const overlaySelector = (R, L) => {
     return (
       <Fragment>
-        {R && <ROverlay />}
-        {L && <Overlay />}
+        {R && <ROverlay y = {y} />}
+        {L && <Overlay y  = {y} />}
       </Fragment>
     );
   };

@@ -9,7 +9,7 @@ let styles;
 
 const Overlay = (props) => {
   let x = useSelector((state) => state.x);
-  let y = useSelector((state) => state.y);
+  let y = props.y;
   useMemo(() => {
     styles = {
       position: "absolute",

@@ -9,7 +9,7 @@ let styles;
 
 const ROverlay = (props) => {
   let x = useSelector((state) => state.xn);
-  let y = useSelector((state) => state.y);
+  let y = props.y;
   useMemo(() => {
     styles = {
       position: "absolute",

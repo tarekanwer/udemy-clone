@@ -38,7 +38,8 @@ const responsive = {
   },
 };
 
-const CategoryCourses = () => {
+const CategoryCourses = (props) => {
+  const y = props.y;
   return (
     <div className={classes.container}>
       <Carousel
@@ -71,13 +72,13 @@ const CategoryCourses = () => {
           gap: "1rem",
         }}
       >
-        <CourseCard key={0} />
-        <CourseCard key={1} />
-        <CourseCard key={2} />
-        <CourseCard key={3} />
-        <CourseCard key={4} />
-        <CourseCard key={5} />
-        <CourseCard key={6} />
+        <CourseCard key={0} y = {y} />
+        <CourseCard key={1} y = {y} />
+        <CourseCard key={2} y = {y} />
+        <CourseCard key={3} y = {y} />
+        <CourseCard key={4} y = {y} />
+        <CourseCard key={5} y = {y} />
+        <CourseCard key={6} y = {y} />
       </Carousel>
     </div>
   );
