@@ -76,7 +76,7 @@
   .search__text {
     padding: 0 24px;
     border: 0;
-    background-color:  rgb(241, 241, 241);
+    background-color: rgb(241, 241, 241);
     flex-grow: 1;
     flex-shrink: 1;
   }
@@ -132,7 +132,7 @@
     margin: 1rem 2rem 1rem 0.2rem;
   }
   .lng:hover,
-  .log__in:hover{
+  .log__in:hover {
     background-color: rgb(241, 241, 241);
   }
 }

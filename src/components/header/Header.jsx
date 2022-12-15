@@ -59,7 +59,7 @@ const Header = () => {
       <button className={classes.log__in}>Log in</button>
       <button className={classes.sign__up}>Sign up</button>
       <button className={classes.lng}>
-        <LanguageIcon/>
+        <LanguageIcon />
       </button>
     </header>
   );
