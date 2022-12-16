@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container img {
+  width: auto;
+  height: auto;
+}
+
+.container img:hover {
+  transform: scale(1.01);
+}
+
+.container h5 {
+  margin: 0;
+  font-size: 1rem;
+  align-self: flex-start;
+  padding: 0.5rem;
+}
+
