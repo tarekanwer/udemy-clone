@@ -11,7 +11,6 @@
 }
 
 .modal {
-  /* display: none; */
   background-color: white;
   width: 90vw;
   height: 10rem;
@@ -34,7 +33,6 @@
 }
 
 .modal__2 {
-  /* display: none; */
   width: 90vw;
   height: 9rem;
   padding: 2.4rem;
