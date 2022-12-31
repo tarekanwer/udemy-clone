@@ -1,7 +1,6 @@
 import { createStore } from "redux";
 const initState = {
   x: 0,
-  y: 0,
   xn: 0,
   R: false,
   L: false,
@@ -12,7 +11,6 @@ const overlayReducer = (state = initState, action) => {
     let position = action.position;
     let x = position.right * 1.01;
     let xn = position.left - 330;
-    // let y = 745;
     let overlay = action.overlay;
     let R;
     let L;
