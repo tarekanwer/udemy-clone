@@ -72,13 +72,13 @@ const CategoryCourses = (props) => {
           gap: "1rem",
         }}
       >
-        <CourseCard key={0} y = {y} />
-        <CourseCard key={1} y = {y} />
-        <CourseCard key={2} y = {y} />
-        <CourseCard key={3} y = {y} />
-        <CourseCard key={4} y = {y} />
-        <CourseCard key={5} y = {y} />
-        <CourseCard key={6} y = {y} />
+        <CourseCard key={0} y={y} />
+        <CourseCard key={1} y={y} />
+        <CourseCard key={2} y={y} />
+        <CourseCard key={3} y={y} />
+        <CourseCard key={4} y={y} />
+        <CourseCard key={5} y={y} />
+        <CourseCard key={6} y={y} />
       </Carousel>
     </div>
   );
