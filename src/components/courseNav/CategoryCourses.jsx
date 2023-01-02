@@ -6,7 +6,6 @@ import "react-multi-carousel/lib/styles.css";
 
 const responsive = {
   b6: {
-    // the naming can be any, depends on you.
     breakpoint: { max: 4000, min: 1200 },
     items: 5,
     partialVisibilityGutter: 40,
