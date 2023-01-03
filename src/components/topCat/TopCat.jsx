@@ -11,13 +11,25 @@ const cards = [
     category: "Development",
     img: "https://s.udemycdn.com/home/top-categories/lohp-category-development-2x-v2.jpg",
   },
+  {
+    category: "Marketing",
+    img: "https://s.udemycdn.com/home/top-categories/lohp-category-marketing-v2.jpg",
+  },
+  {
+    category: "IT and Software",
+    img: "https://s.udemycdn.com/home/top-categories/lohp-category-it-and-software-v2.jpg",
+  },
 ];
 
 const TopCat = () => {
   return (
     <div className={classes.container}>
       <h1>Top categories</h1>
-      <CatCard img={cards[0].img} category={cards[0].category} />
+      <div>
+        {cards.map((card) => {
+          return <CatCard img={card.img} category={card.category} />;
+        })}
+      </div>
     </div>
   );
 };
