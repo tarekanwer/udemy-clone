@@ -19,6 +19,22 @@ const cards = [
     category: "IT and Software",
     img: "https://s.udemycdn.com/home/top-categories/lohp-category-it-and-software-v2.jpg",
   },
+  {
+    category: "Personal Development",
+    img: "https://s.udemycdn.com/home/top-categories/lohp-category-personal-development-v2.jpg",
+  },
+  {
+    category: "Business",
+    img: "https://s.udemycdn.com/home/top-categories/lohp-category-business-v2.jpg",
+  },
+  {
+    category: "Photography",
+    img: "https://s.udemycdn.com/home/top-categories/lohp-category-photography-v2.jpg",
+  },
+  {
+    category: "Music",
+    img: "https://s.udemycdn.com/home/top-categories/lohp-category-music-v2.jpg",
+  },
 ];
 
 const TopCat = () => {
