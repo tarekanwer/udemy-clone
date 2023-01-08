@@ -22,3 +22,9 @@
   align-self: flex-start;
   padding: 0.5rem;
 }
+
+@media (max-width: 50rem) {
+  .container {
+    width: 90%;
+  }
+}
