@@ -24,6 +24,7 @@ const Cart = styled(ShoppingCartOutlinedIcon)({
     color: "#5624d0",
   },
 });
+
 const Header = () => {
   return (
     <header className={classes.container}>
